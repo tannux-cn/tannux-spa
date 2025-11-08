@@ -1,0 +1,69 @@
+<!-- 
+/*!
+ * tannux-spa v1.0.0 (http://tannux.com)
+ * Copyright 2024-2025 Tannux Technology Co., LTD
+ * Licensed under the Apache License, Version 2.0.
+ */
+ -->
+<!doctype html>
+<html lang="en" class="fullscreen-bg">
+	<head>
+		<title></title>
+		<script>
+			w=Math.min(window.screen.width,window.screen.height);
+			r=w/((window.screen.width>500&&window.screen.height>500) ? 750 : 400);
+			s=100*r;document.getElementsByTagName('html')[0].style['font-size']=s+'px';
+		</script>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta http-equiv="pragma" content="no-cache">
+ 		<meta http-equiv="cache-control" content="no-cache">
+ 		<meta http-equiv="expires" content="0">
+		<!-- VENDOR CSS -->
+		<link rel="stylesheet" href="../css/tannux-all.css" type="text/css">
+		<!-- MAIN CSS -->
+		<link rel="stylesheet" href="../css/base/core.css" type="text/css">
+		<link rel="stylesheet" href="../css/base/core-m.css" type="text/css">
+		<!-- PROJECT CSS -->
+		<link rel="stylesheet" href="../../layout/spa/adapter-mobile.css" type="text/css">
+		<!-- ICONS -->
+		<link rel="icon" type="image/png" href="../../layout/spa/favicon.png">
+	</head>
+	<body class="tx-m-body-bg">
+		<div id="TX_base_main_menu_container" class="tx-m-menu-container"></div>
+		<div id="TX_m_base_main_footer" class="tx-m-footer"></div>
+	</body>
+<script src='../js/third-all.js'></script>
+<script src='../js/tannux-all.js'></script>
+<script src='./js/spa-abstract.js'></script>
+<script src='./js/spa-mobile.js'></script>
+<script src='../../layout/spa/adapter-mobile.js'></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	initApp();
+	if(CU.isFunction(window.beforeInitLayout)) window.beforeInitLayout();
+	PU.initLayout(function() {
+		initLayout();
+		if(CU.isFunction(window.afterInitLayout)) window.afterInitLayout();
+		
+		if(CU.isFunction(window.beforeInitialization)) window.beforeInitialization();
+		initialization(function() {
+			if(CU.isFunction(window.afterInitialization)) window.afterInitialization();
+			
+			if(CU.isFunction(window.beforeInitPage)) window.beforeInitPage();
+			initPage();
+			if(CU.isFunction(window.afterInitPage)) window.afterInitPage();
+		});
+	});
+});
+</script>
+</html>
+
+
+
+
+
+

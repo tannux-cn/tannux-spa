@@ -1,0 +1,110 @@
+#wrapper .sidebar {
+  background-color: #2c486d;
+}
+
+.sidebar .nav li > a {
+  color: #d6e1f1;
+}
+
+.sidebar .nav li > a:hover, .sidebar .nav li > a.active {
+  background-color: #1b2d44;
+}
+
+.sidebar .nav li > a[aria-expanded="true"], .sidebar .nav li > a.active {
+  background-color: transparent;
+  color: #00AAFF;
+}
+
+.sidebar .nav li > a.active:hover {
+  background-color: #1b2d44;
+}
+
+.sidebar .nav li > a:focus {
+  background-color: transparent;
+}
+
+.sidebar .nav .nav {
+  background-color: #2c486d;
+}
+
+.sidebar .nav .nav > li > a.active {
+  background-color: #1b2d44;
+  color: #d6e1f1;
+}
+
+.sidebar-minified .sidebar .nav > li:hover > a,
+.sidebar-minified .sidebar .nav > li:hover .collapse li:hover > a {
+  background-color: #2c486d;
+  color: #00AAFF;
+}
+
+.sidebar-minified .sidebar .collapse {
+  background: #2c486d;
+}
+
+.sidebar-minified .sidebar .nav > li:hover > a,
+.sidebar-minified .sidebar .nav li:hover > a > .title {
+  background: #29313b;
+}
+
+.btn-toggle-minified {
+  background: #252c35;
+  color: #d6e1f1;
+  border-color: #21272f;
+}
+
+.btn-toggle-minified:hover {
+  color: #d6e1f1;
+  background: #232932;
+}
+
+.sidebar {
+  border-right-color: #2c486d;
+}
+
+.right-sidebar {
+  background-color: #2c486d;
+  color: #fff;
+}
+
+.right-sidebar .widget-header {
+  background-color: #1b2d44;
+  border-color: #232932;
+}
+
+.right-sidebar .widget-header .show-all {
+  color: #7d93b3;
+}
+
+.right-sidebar .icon-transparent-area .badge {
+  border-color: #2c486d;
+}
+
+.right-sidebar .list-project-progress .project-name,
+.right-sidebar .list-project-progress .percentage {
+  color: #fff;
+}
+
+.right-sidebar .list-file-simple a, .right-sidebar .list-file-simple a:hover, .right-sidebar .list-file-simple a:focus {
+  color: #fff;
+}
+
+.right-sidebar .list-file-simple span {
+  color: #fff;
+}
+
+.right-sidebar .btn-default {
+  background-color: #232932;
+  border-color: #1e242c;
+  color: #fff;
+}
+
+.right-sidebar .btn-default:hover, .right-sidebar .btn-default:focus {
+  background-color: #1e242c;
+  border-color: #1a1f26;
+}
+
+.right-sidebar .btn-default.active:hover, .right-sidebar .btn-default.active:focus, .right-sidebar .btn-default:active:hover, .right-sidebar .btn-default:active:focus {
+  border-color: #1a1f26;
+  color: #fff;
+}

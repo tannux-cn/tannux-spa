@@ -1,0 +1,233 @@
+
+.toast-top-center {
+    top: 50%;
+}
+#toast-container.toast-bottom-center>div, #toast-container.toast-top-center>div {
+    width: fit-content;
+    min-width: 1.2rem;
+	max-width: 2.4rem;
+}
+#toast-container>.toast-success {
+	background-color: #666666c0;
+	background-image:unset !important;
+	padding: 0.06rem 0.12rem !important;
+	    text-align: center;
+}
+#toast-container>.toast-error {
+	background-color: #666666c0;
+	background-image:unset !important;
+	padding: 0.06rem 0.12rem !important;
+	    text-align: center;
+}
+#toast-container>.toast-info {
+	background-color: #666666c0;
+	background-image:unset !important;
+	padding: 0.06rem 0.12rem !important;
+	    text-align: center;
+}
+
+
+
+.tx-m-body-bg {
+	background:#D6DCEA;
+}
+.tx-m-footer {
+	width: 100%;
+    border-top: 1px solid #d0d0d0;
+    position: fixed;
+    bottom: 0;
+    height: 0.6rem;
+    padding: 0.08rem 0.1rem;
+    background: #ffffff;
+    z-index: 1050;
+}
+.tx-m-footer .tx-m-menu {
+	float:left;
+	text-align: center;
+}
+.tx-m-footer .tx-m-menu.active {
+	color:#4A73F7;
+}
+.tx-m-footer .tx-m-menu .tx-m-menu-img img {
+	width: 0.22rem;
+}
+.tx-m-btn-back {
+	position: absolute;
+    top: 0px;
+    left: 0;
+    text-align: left;
+    padding-left: 0.1rem;
+    width: 0.34rem;
+    background: url(../../assets/img/back_white.png) no-repeat;
+    background-position: right;
+    background-size: 0.24rem auto;
+}
+.tx-m-menu-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    height:100%;
+    z-index:9999;
+}
+
+.tx-m-bottom-tools {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0.75rem;
+}
+
+.tx-m-menu-content {
+	padding-bottom: 0.62rem;
+}
+.tx-m-menu-content .tx-m-title {
+	position: fixed;
+    top: 0px;
+	width: 100%;
+    line-height: 0.38rem;
+    height: 0.38rem;
+    font-size: 0.16rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #667BF7;
+    font-weight: bold;
+    z-index: 1050;
+}
+
+.tx-m-menu-content .tx-m-content {
+	font-size: 0.15rem;
+    color: #333333;
+    padding: 0.1rem;
+}
+.tx-m-menu-content .tx-m-content.away-title {
+	margin-top: 0.38rem;
+}
+.tx-m-menu-content .m-full {
+	margin:-0.1rem;
+}
+
+.m-record-box {
+    background: #ffffff;
+    border: 0.005rem solid #e6e6e6;
+    border-radius: 0.07rem;
+    padding-top: 0.06rem;
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+.m-record-box .record-title {
+    width: 100%;
+    padding-top: 0.08rem;
+    padding-bottom: 0.08rem;
+}
+.m-record-box .record-data {
+	width: 100%;
+    padding-top: 0.02rem;
+    padding-bottom: 0.00rem;
+}
+
+.m-record-box .record-title .name {
+    display: inline-block;
+    text-align: left;
+    font-weight: unset;
+    padding-left: 0.1rem;
+    color: #333333;
+    margin-bottom: unset;
+    font-size: 0.16rem;
+    height: 0.34rem;
+    line-height: 0.34rem;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.m-record-box .record-title .value {
+    text-align: right;
+    font-weight: unset;
+    padding-right: 0.1rem;
+    color: #666666;
+    margin-bottom: unset;
+    font-size: 0.16rem;
+    height: 0.34rem;
+    line-height: 0.34rem;
+    vertical-align: top;
+    float: right;
+}
+
+.m-record-box .record-data .name {
+    display: inline-block;
+    text-align: left;
+    font-weight: unset;
+    padding-left: 0.1rem;
+    color: #666666;
+    margin-bottom: unset;
+    font-size: 0.15rem;
+    /* height: 0.34rem; */
+    line-height: 0.34rem;
+    vertical-align: top;
+    width: 1rem;
+}
+.m-record-box .record-data .value {
+    text-align: right;
+    font-weight: unset;
+    /* padding-right: 0.1rem; */
+    color: #6a6a6a;
+    margin-bottom: unset;
+    font-size: 0.15rem;
+    /* height: 0.34rem; */
+    line-height: 0.34rem;
+    vertical-align: top;
+    width: calc(100% - 1.15rem);
+    display: inline-table;
+}
+
+
+.m-grid-box {
+    background: #ffffff;
+    border: 0;
+}
+.m-grid-box .record {
+	width: 100%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+.m-grid-box .record .name {
+    display: inline-block;
+    text-align: left;
+    font-weight: unset;
+    padding-left: 0.1rem;
+    color: #333333;
+    margin-bottom: unset;
+    font-size: 0.15rem;
+    /* height: 0.34rem; */
+    line-height: 0.34rem;
+    vertical-align: top;
+    width: 1rem;
+}
+.m-grid-box .record .value {
+    text-align: right;
+    font-weight: unset;
+    /* padding-right: 0.1rem; */
+    color: #555555;
+    margin-bottom: unset;
+    font-size: 0.15rem;
+    /* height: 0.34rem; */
+    line-height: 0.34rem;
+    vertical-align: top;
+    width: calc(100% - 1.15rem);
+    display: inline-table;
+}
+
+.top6 {
+	padding-top: 0.06rem;
+}
+.top8 {
+	padding-top: 0.08rem;
+}
+.nomore {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    color: #999;
+    font-size: 0.12rem;
+}

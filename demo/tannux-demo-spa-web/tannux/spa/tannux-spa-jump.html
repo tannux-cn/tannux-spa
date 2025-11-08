@@ -1,0 +1,70 @@
+<!-- 
+/*!
+ * tannux-spa v1.0.0 (http://tannux.com)
+ * Copyright 2024-2025 Tannux Technology Co., LTD
+ * Licensed under the Apache License, Version 2.0.
+ */
+ -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="pragma" content="no-cache">
+ 		<meta http-equiv="cache-control" content="no-cache">
+ 		<meta http-equiv="expires" content="0">
+		<!-- VENDOR CSS -->
+		<link rel="stylesheet" href="../css/tannux-all.css" type="text/css">
+		
+		<!-- MAIN CSS -->
+		<link rel="stylesheet" href="../assets/css/skins/sidebar-nav-tannux.css" type="text/css">
+		<link rel="stylesheet" href="../assets/css/skins/navbar-tannux.css" type="text/css">
+		<link rel="stylesheet" href="../css/base/core.css" type="text/css">
+		
+		<!-- PROJECT CSS -->
+		<link rel="stylesheet" href="../../layout/spa/adapter-pc.css" type="text/css">
+		<!-- ICONS -->
+		<link rel="icon" type="image/png" href="../../layout/spa/logo-small.png">
+	</head>
+	<body>
+	</body>
+<script src='../js/third-all.js'></script>
+<script src='../js/tannux-all.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	PRQ.params = CU.parseUrlParams(window.location+"");
+	
+	var token = PRQ.get("token");
+	var type = PRQ.get("type");
+	var menuCode = PRQ.get("menuCode");
+	var ps = PRQ.get("menuParams");
+	
+	if(!CU.isEmpty(token)) {
+		PU.verifyToken(token);
+	}
+	if(CU.isEmpty(type)) {
+		type = "normal";
+	}
+	
+	if(type == "mobile") {
+		window.parent.closeMenu(false);
+	}else {
+		var url = CU.getUri(window.location + "");
+		
+		url = url.substring(0, url.lastIndexOf('/')) + "/tannux-spa-"+type+".html";
+		if(!CU.isEmpty(menuCode)) url += "?menuCode=" + menuCode;
+		if(!CU.isEmpty(ps)) {
+			ps = CU.trim(ps+"");
+			if(ps.indexOf('%') >= 0) ps = CU.trim(decodeURIComponent(ps));
+			if(ps.length>2 && ps.charAt(0)=='{' && ps.charAt(ps.length-1)=='}') {
+				window.localStorage.setItem("TANNUX_SPA_JUMP_PARAMS", ps);
+			}
+		}
+		window.location = url;
+	}
+});
+</script>
+</html>

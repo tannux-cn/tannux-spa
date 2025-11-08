@@ -1,0 +1,17 @@
+2025-11-07 18:56:25  [ main:1686 ] - [ ERROR ]  start eclipse-jetty-server is failure.
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.tannux.application.jetty.EclipseJettyServer.start(EclipseJettyServer.java:370)
+	at com.tannux.application.jetty.EclipseJettyServer.start(EclipseJettyServer.java:314)
+	at com.tannux.application.jetty.JettyMain.main(JettyMain.java:92)
+	at com.tannux.demo.spa.server.test.TestServerMain.main(TestServerMain.java:9)

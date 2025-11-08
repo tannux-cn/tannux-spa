@@ -1,0 +1,3 @@
+2025-11-05 18:33:45  [ qtp415186196-20:595586 ] - [ ERROR ]  /tannux-demo-spa-server/api/rest2/sys/menu/queryList : 路径错误:'rest2/sys/menu/queryList'.
+2025-11-05 18:34:53  [ qtp415186196-16:664308 ] - [ ERROR ]  /tannux-demo-spa-server/api/rest2/sys/menu/queryList : 路径错误:'rest2/sys/menu/queryList'.
+2025-11-05 18:35:13  [ qtp415186196-20:683385 ] - [ ERROR ]  /tannux-demo-spa-server/api/rest2/sys/menu/queryList : 路径错误:'rest2/sys/menu/queryList'.

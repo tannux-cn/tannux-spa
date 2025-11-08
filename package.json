@@ -1,0 +1,51 @@
+{
+  "name": "tannux-spa",
+  "version": "1.0.0",
+  "description": "基于jquery的前端单页应用框架",
+  "license": "Apache-2.0",
+  "author": "wanwb@tannux.com",
+  "repository": {
+	"type": "git",
+    "url": "https://github.com/yourname/your-project.git"
+  },
+	"tannux": {
+	  	"css": {
+	  		"base": {
+	  			"core.css": "tannux-spa框架使用的核心样式",
+	  			"core-m.css": "tannux-spa框架在移动端使用的扩展样式, 移动端也会用core.css"
+	  		},
+	  		"tannux-all.css" : "所有固定依赖的css压缩成的一个文件"
+	  	},
+	  	"js": {
+	  		"bootstrap": {
+	  			"PrettyDataForm.js": "表单相关对象组件",
+	  			"PrettyDataTable.js": "列表相关对象组件"
+	  		},
+	  		"util": {
+		  		"comm.js": "基础工具函数",
+		  		"json2.js": "JSON转换工具",
+		  		"preq.js": "页面参数封装对象",
+		  		"proutil.js": "项目级工具函数",
+		  		"rosvc.js": "远程请求服务封装对象"
+		  	},
+		  	"tannux-all.js": "所有我们自己封装的js统一压缩成的一个文件",
+		  	"third-all.js": "所有第三方js组件统一压缩成的一个文件"
+		},
+	  	"spa": {
+	  		"js": {
+	  			"spa-abstract.js": "tannux-spa核心文件",
+	  			"spa-normal.js": "标准页扩展类",
+	  			"spa-top.js": "顶部菜单扩展类",
+	  			"spa-mobile.js": "移动端扩展类"
+	  		},
+	  		"menus": {
+	  			"$TannuxWebView.js": "系统扩展菜单"
+	  		},
+	  		"tannux-spa-normal.html": "标准页面模板",
+	  		"tannux-spa-top.html": "顶部菜单页面模板",
+	  		"tannux-spa-mobile.html": "移动端页面模板",
+	  		"tannux-spa-jump.html": "跳调页，推荐与第三方集成时通过此页跳转"
+	  	}
+	}
+  
+}

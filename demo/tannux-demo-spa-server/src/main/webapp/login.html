@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>TANNUX-DEMO-登录</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="pragma" content="no-cache">
+ 		<meta http-equiv="cache-control" content="no-cache">
+ 		<meta http-equiv="expires" content="0">
+<style type="text/css">
+.login-form {
+	text-align: center;
+    margin-top: 200px;
+    height: 100%;
+    font-size: 15px;
+}
+.login-form .row {
+	height: 36px;
+}
+.login-form .row input {
+    height: 20px;
+}
+.login-form .row button {
+	padding: 3px 16px;
+}
+.login-form .text {
+	padding-bottom: 10px;
+}
+.login-form .msg {
+	color:red;
+	padding-top: 10px;
+}
+</style>
+	</head>
+	<body>
+		<!-- 此页正常情况应在sso中，当前只为演示 -->
+		<div class="login-form">
+			<form action="./api/form/sys/auth/login">
+				<div class="row text">
+					初始账号admin，密码随意
+				</div>
+				<div class="row">
+					<label>账号</label>
+					<input type="input" name="loginCode" >
+				</div>
+				<div class="row">
+					<label>密码</label>
+					<input type="password" name="password" >
+					
+					<input type="hidden" id="callbackUrl" name="callbackUrl">
+				</div>
+				<div class="row">
+					<button type="submit">登录</button>
+				</div>
+				<div id="div_msg" class="row msg">
+				</div>
+			</form>
+		</div>
+	</body>
+<script type="text/javascript">
+window.onload = function() {
+	var url = window.location.href + "";
+	var idx = url.indexOf('?');
+	if(idx > 0) {
+		var qs = url.substring(idx+1);
+		if(qs.length>0) {
+			var arr = qs.split('&');
+			for(var i=0; i<arr.length; i++) {
+				var item = arr[i];
+				if((idx=item.indexOf('=')) > 0) {
+					var key = item.substring(0, idx);
+					var value = item.substring(idx+1);
+					
+					if(key.length==0 || value.length==0) {
+						continue;
+					}
+					if(value.indexOf('%') >= 0) {
+						value = decodeURIComponent(value);
+					}
+					
+					if(key == "callbackUrl") {
+						document.getElementById("callbackUrl").value = value;
+					}else if(key == "msg") {
+						document.getElementById("div_msg").innerHTML = value;
+					}
+				}
+			}
+		}
+	}
+};
+</script>
+</html>
+
+
+
