@@ -12,7 +12,7 @@ tannux-spa为基于jquery的前端框架，其主要特点有：
 5.	生产型框架，上手即可拿来开发项目。
 演示环境访问地址：https://demo.tannux.com/tannux-spa-demo/index.html
 
-tannux-spa的说明文档请访问：https://cms.tannux.com/cms/api/simple/cms/webview/cont/tannux/CN25110800000001.nlo
+tannux-spa的说明文档请访问：https://doc.tannux.com/tannux-doc/route.html?menuCode=CS25113000000001
 
 
 tannux-spa使用说明如下：
@@ -110,7 +110,7 @@ tannux-demo-spa-server目录对应的是服务端源码，仅供参考。
 tannux-spa主张前端所有的系统配置参数统一由后端管理，前端只配置一个获取配置参数的地址（如：layout/spa/adapter-pc.js中的AppConfig
 .configUrl）。参数如果在前端配置，参数就被固化了，如需修改参数还需要重新发布应用，要知道移动端要让用户重新下载APP代价是巨大的。配置参数如果是在后端，前端能有一个刷新参数的机制，那么不用更新应用也可以更新参数。
 
-通过以上的说明，希望能帮助你对tannux-spa有一定的了解，详细说明请访问：https://cms.tannux.com/cms/api/simple/cms/webview/cont/tannux/CN25110800000001.nlo。
+通过以上的说明，希望能帮助你对tannux-spa有一定的了解，详细说明请访问：https://doc.tannux.com/tannux-doc/route.html?menuCode=CS25113000000001
 要想深入的了解最好的方法就是上手，spa主要能力源码都在tannux/spa目录下，源码也不多，希望能耐心观看，也希望对你的学识及项目有一定的帮助。
 
 版权声明，遵循Apache 2.0协议内容，详情参见LICENSE文件。

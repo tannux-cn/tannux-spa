@@ -44,8 +44,8 @@ function SysUserList() {
 	
 	
 	this.query = function() {
-		var el_cont = thiz.dom.find(".tab-user-list");
-		var el_nomore = thiz.dom.find(".nomore");
+		var el_cont = thiz.$(".tab-user-list");
+		var el_nomore = thiz.$(".nomore");
 		el_cont.html("");
 		el_nomore.addClass("none");
 			

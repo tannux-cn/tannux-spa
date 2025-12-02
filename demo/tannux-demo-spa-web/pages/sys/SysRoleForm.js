@@ -40,7 +40,7 @@ function SysRoleForm() {
 	};
 	
 	this.initListener = function() {
-		thiz.dom.find(".btn-refresh").bind("click", function() {
+		thiz.$(".btn-refresh").bind("click", function() {
 			refreshMenu();
 		});
 	};

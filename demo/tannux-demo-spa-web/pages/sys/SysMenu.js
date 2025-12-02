@@ -31,7 +31,7 @@ function SysMenu() {
 	
 	this.initComponent = function() {
 		thiz.P_tree = PU.getTree({
-			bid : thiz.dom.find(".tree_menu"), 
+			bid : thiz.$(".tree_menu"), 
 			addroot : DC, 
 			url : "/sys/menu/queryTree",
 			appendAttrs : true,
@@ -53,8 +53,8 @@ function SysMenu() {
 									afterSubmit:thiz.saveCallback});
 	};
 	this.initListener = function() {
-		thiz.dom.find(".a_menu_addFirst").bind("click", thiz.addFirstMenu);
-		thiz.dom.find(".btn_removeMenu").bind("click", thiz.removeMenu);
+		thiz.$(".a_menu_addFirst").bind("click", thiz.addFirstMenu);
+		thiz.$(".btn_removeMenu").bind("click", thiz.removeMenu);
 		
 		thiz.P_tree.bind("select", function(node, selected, e, tree) {
 			thiz.ParentId = node.parent;

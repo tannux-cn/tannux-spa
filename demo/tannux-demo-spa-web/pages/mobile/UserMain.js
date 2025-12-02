@@ -33,8 +33,8 @@ function UserMain() {
 	
 	
 	this.initListener = function() {
-		thiz.dom.find(".btn-logout").bind("click", thiz.logout);
-		thiz.dom.find(".btn-refresh").bind("click", refreshMenu);
+		thiz.$(".btn-logout").bind("click", thiz.logout);
+		thiz.$(".btn-refresh").bind("click", refreshMenu);
 	};
 	
 	this.verifyLogin = function(cb) {
@@ -49,7 +49,7 @@ function UserMain() {
 	
 	
 	this.setLoginUserInfo = function() {
-		PU.setPageData(window.SU, thiz.dom.find(".m-grid-box"));
+		PU.setPageData(window.SU, thiz.$(".m-grid-box"));
 	};
 	
 	

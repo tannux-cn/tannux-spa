@@ -615,6 +615,10 @@ function renderMenuContent(name, menuNode, open, openConfig) {
 	//创建菜单对象
 	var mo = new window[name]();
 	mo.menu = menuNode.data;
+	mo.$ = function(a,b) {return this.dom.find(a,b);};
+	mo.$name = function(a,b,c) {return this.dom.find("input[name='"+a+"'], select[name='"+a+"'], textarea[name='"+a+"']",b);};
+	mo.$n = mo.$name;
+	mo.$vn = function(a,b) {return this.dom.find("[for-name='"+a+"']",b);};
 	
 	//菜单初始化
 	executeMenuInit(open, menuNode, openConfig, mo, false);

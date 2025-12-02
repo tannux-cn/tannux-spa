@@ -31,7 +31,7 @@ function SysUserList() {
 	
 	
 	this.initComponent = function() {
-		var el = thiz.dom.find(".panel-body");
+		var el = thiz.$(".panel-body");
 		this.P_grid = PU.getDataTable({
 			bid : el,
 			addroot:DC, 
@@ -59,11 +59,11 @@ function SysUserList() {
 				  return [pageNum, pageSize, cdt, orders];
 			  },
 			  drawCallback : function(settings) {
-				  thiz.dom.find("a[name='a_edit']").bind("click", function() {
+				  thiz.$("a[name='a_edit']").bind("click", function() {
 					  thiz.CurrentId = $(this).attr("dataId");
 					  thiz.showFormWin();
 				  });
-				  thiz.dom.find("a[name='a_remove']").bind("click", function() {
+				  thiz.$("a[name='a_remove']").bind("click", function() {
 				  	  var el = $(this);
 					  thiz.CurrentId = el.attr("dataId");
 					  var roleName = el.attr("dataName");
@@ -73,7 +73,7 @@ function SysUserList() {
 		});
 	};
 	this.initListener = function() {
-		thiz.dom.find(".btn_add").bind("click", function() {
+		thiz.$(".btn_add").bind("click", function() {
 			thiz.CurrentId = "";
 			thiz.showFormWin();
 		});
